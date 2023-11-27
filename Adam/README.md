@@ -8,11 +8,13 @@ Adam 是一種自適應學習率的優化算法，結合了動量梯度下降和
 
 
 \begin{align*}
+
 m_t &= \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla_{\theta_i} F(\theta_t) \\
 v_t &= \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot (\nabla_{\theta_i} F(\theta_t))^2 \\
 \hat{m}_t &= \frac{m_t}{1 - \beta_1^t} \\
 \hat{v}_t &= \frac{v_t}{1 - \beta_2^t} \\
 \theta_{t+1} &= \theta_t - \frac{\alpha}{\sqrt{\hat{v}_t} + \delta} \cdot \hat{m}_t
+
 \end{align*}
 
 
