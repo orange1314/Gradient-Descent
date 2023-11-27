@@ -8,9 +8,9 @@ Adadelta 是一種自適應學習率的優化算法，是 Adagrad 的變種之�
 
    給定損失函數 \(F(\theta)\)，對於每一個參數 \(\theta_i\)，Adadelta 的更新規則為：
 
-   [
-   \theta_i = \theta_i - \frac{\sqrt{\tilde{E}[\Delta \theta^2] + \epsilon}}{\sqrt{\tilde{E}[g^2] + \epsilon}} \cdot g_i
-   \]
+   $$
+   theta_i = \theta_i - \frac{\sqrt{\tilde{E}[\Delta \theta^2] + \epsilon}}{\sqrt{\tilde{E}[g^2] + \epsilon}} \cdot g_i
+   $$
 
    其中：
    - \(g_i\) 是當前參數 \(\theta_i\) 的梯度。
@@ -18,7 +18,7 @@ Adadelta 是一種自適應學習率的優化算法，是 Adagrad 的變種之�
    - \(\tilde{E}[\Delta \theta^2]\) 是參數變化量平方的指數移動平均，表示過去參數變化量平方的加權和。
    - \(\epsilon\) 是一個很小的常數，用來防止分母為零。
 
-2. **特點**：
+3. **特點**：
 
    - **自適應學習率**：Adadelta 通過考慮過去梯度平方的移動平均，實現對每個參數的自適應學習率。
 
@@ -26,7 +26,7 @@ Adadelta 是一種自適應學習率的優化算法，是 Adagrad 的變種之�
 
    - **避免學習率遞減過快**：由於引入了梯度平方的指數移動平均，Adadelta 在學習過程中能夠避免學習率下降過快的問題，增強了穩定性。
 
-3. **偏差校正**：
+4. **偏差校正**：
 
    Adadelta 引入了偏差校正的概念，這是為了補償過去梯度平方的指數移動平均未考慮初始時刻的不足。具體而言，Adadelta 對梯度平方的指數移動平均和參數變化量平方的指數移動平均進行了偏差校正：
 
