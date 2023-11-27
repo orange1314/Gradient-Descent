@@ -4,17 +4,17 @@ Adadelta 是一種自適應學習率的優化算法，是 Adagrad 的變種之�
 
 ## 1. 算法描述
 
-給定損失函數 $ \(F(\theta)\)$，對於每一個參數 $\(\theta_i\)$，Adadelta 的更新規則為：
+給定損失函數 $F(\theta)$，對於每一個參數 $\theta_i$，Adadelta 的更新規則為：
 
 $$
 \theta_i = \theta_i - \frac{\sqrt{\tilde{E}[\Delta \theta^2] + \epsilon}}{\sqrt{\tilde{E}[g^2] + \epsilon}} \cdot g_i
 $$
 
 其中：
-- $\(g_i\)$ 是當前參數 $\(\theta_i\)$ 的梯度。
-- $\(\tilde{E}[g^2]\)$ 是梯度平方的指數移動平均，表示過去梯度平方的加權和。
-- $\(\tilde{E}[\Delta \theta^2]\)$ 是參數變化量平方的指數移動平均，表示過去參數變化量平方的加權和。
-- $\(\epsilon\)$ 是一個很小的常數，用來防止分母為零。
+- $g_i$ 是當前參數 $\(\theta_i\)$ 的梯度。
+- $\tilde{E}[g^2]$ 是梯度平方的指數移動平均，表示過去梯度平方的加權和。
+- $\tilde{E}[\Delta \theta^2]$ 是參數變化量平方的指數移動平均，表示過去參數變化量平方的加權和。
+- $\epsilon$ 是一個很小的常數，用來防止分母為零。
 
 ## 2. 特點
 
