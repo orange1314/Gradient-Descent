@@ -2,7 +2,7 @@
 
 梯度下降是一種最優化算法，用於尋找函數的最小值。有多種梯度下降的變體，以下是一些常見的方法：
 
-### 標準梯度下降（Batch Gradient Descent）
+### (標準梯度下降（Batch Gradient Descent）)[https://github.com/orange1314/Gradient-Descent/tree/main/Batch%20Gradient%20Descent]
 
 - **優點：** 全局收斂，對小批量數據進行高效處理。
 - **缺點：** 對大數據集的計算效率較低。
