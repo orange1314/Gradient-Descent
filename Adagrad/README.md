@@ -9,9 +9,9 @@ Adagrad（自適應梯度算法）是一種優化算法，它利用自適應學�
 
    給定損失函數 $F(\theta)$，對於每一個參數 $\theta_i$，Adagrad 的更新規則為：
 
-   $$
-   \theta_i = \theta_i - \frac{\alpha}{\sqrt{G_{ii} + \delta}} \cdot \nabla_{\theta_i} F(\theta)
-   $$
+$$
+\theta_i = \theta_i - \frac{\alpha}{\sqrt{G_{ii} + \delta}} \cdot \nabla_{\theta_i} F(\theta)
+$$
 
    其中：
    - $\alpha$ 是學習率（通常是一個較小的正數）。
