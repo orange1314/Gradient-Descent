@@ -7,7 +7,7 @@ Adam 是一種自適應學習率的優化算法，結合了動量梯度下降和
    給定損失函數 $F(\theta)$，對於每一個參數 $\theta_i$，Adam 的更新規則為：
 
 $$
-m_t &= \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla_{\theta_i} F(\theta_t)
+m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla_{\theta_i} F(\theta_t)
 $$
 
 $$
