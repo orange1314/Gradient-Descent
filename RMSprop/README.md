@@ -4,7 +4,7 @@
 
 1. **算法描述**：
 
-   給定損失函數 $\(F(\theta)\)$，對於每一個參數 $\(\theta_i\)$，RMSprop 的更新規則為：
+   給定損失函數 $F(\theta)$，對於每一個參數 $\theta_i$，RMSprop 的更新規則為：
 
 $$
 \theta_i = \theta_i - \frac{\alpha}{\sqrt{E[G^2]_t + \delta}} \cdot G_t
@@ -12,10 +12,10 @@ $$
 
 
    其中：
-   - $\(\alpha\)$ 是學習率（通常是一個較小的正數）。
-   - $\(G_t\)$ 是當前梯度 $\(\nabla_{\theta_i} F(\theta)\)$。
-   - $\(E[G^2]_t\)$ 是梯度平方的移動平均，計算方式為 $\(E[G^2]_t = \beta \cdot E[G^2]_{t-1} + (1 - \beta) \cdot G_t^2\)$，其中 $\(\beta\)$ 是衰減因子，通常取 0.9。
-   - $\(\delta\)$ 是一個很小的常數，防止除以零。
+   - $\alpha$ 是學習率（通常是一個較小的正數）。
+   - $G_t$ 是當前梯度 $\nabla_{\theta_i} F(\theta)$。
+   - $E[G^2]_t$ 是梯度平方的移動平均，計算方式為 $E[G^2]_t = \beta \cdot E[G^2]_{t-1} + (1 - \beta) \cdot G_t^2$，其中 $\beta$ 是衰減因子，通常取 0.9。
+   - $\delta$ 是一個很小的常數，防止除以零。
 
 2. **特點**：
 
