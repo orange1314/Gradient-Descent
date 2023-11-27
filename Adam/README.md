@@ -18,7 +18,7 @@ v_t &= \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot (\nabla_{\theta_i} F(\theta_t
 \end{align*}
 \]
 
-$m_t &= \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla_{\theta_i} F(\theta_t)$
+$m_t &=\beta_1\cdot m_{t-1}+(1-\beta_1)\cdot\nabla_{\theta_i}F(\theta_t)$
 
 
    其中：
